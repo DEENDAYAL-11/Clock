@@ -1,0 +1,190 @@
+:root {
+    --dark-backgroundcolor: rgb(0, 12, 46);
+    --light-backgroundcolor: rgb(171, 188, 235);
+    --dark-box-shadow: 5px 5px 9px rgb(0, 7, 26),
+        -3px -3px 8px rgb(50, 75, 92),
+        inset -3px -3px 8px rgb(50, 75, 92),
+        inset 3px 3px 8px rgb(0, 7, 26);
+    --circle-dark-shadow: inset -3px -3px 8px rgb(50, 75, 92),
+        inset 3px 3px 8px rgb(0, 7, 26);
+    --dark-btn-shadow: inset -1px -3px 8px rgb(0, 7, 26),
+        inset 3px 3px 5px rgb(50, 75, 92);
+    --light-box-shadow: 5px 3px 10px rgb(127, 140, 175),
+        -5px -3px 10px rgb(196, 211, 252),
+        inset -3px -3px 5px rgb(187, 205, 255),
+        inset 3px 3px 8px rgb(127, 140, 175);
+    --light-btn-shadow: inset -3px -3px 5px rgb(187, 205, 255),
+        inset 3px 3px 8px rgb(127, 140, 175);
+    --circle-light-shadow: inset -3px -3px 5px rgb(187, 205, 255),
+        inset 3px 3px 8px rgb(127, 140, 175);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.body {
+    background-color: var(--light-backgroundcolor);
+}
+
+.body-dark {
+    background-color: var(--dark-backgroundcolor);
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 100px;
+    height: auto;
+    padding: 8px;
+}
+
+.dark-btn {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--dark-btn-shadow);
+    color: #10b1cb;
+    background-color: transparent;
+}
+
+.light-btn {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: var(--light-btn-shadow);
+    color: #21232b;
+    background-color: transparent;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 3px solid rgb(171, 188, 235);
+    box-shadow: var(--light-box-shadow);
+}
+
+.dark-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 3px solid rgb(1, 16, 61);
+    box-shadow: var(--dark-box-shadow);
+}
+
+.clock {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-dark {
+    box-shadow: var(--circle-dark-shadow);
+}
+
+.clock-light {
+    box-shadow: var(--circle-light-shadow);
+}
+
+.needle {
+    height: 50px;
+    width: 6px;
+    position: relative;
+    background-color: whitesmoke;
+}
+
+.hour {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    bottom: 20px;
+    left: 2px;
+    transform-origin: bottom;
+    transform: rotate(10deg);
+}
+
+.minute {
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    width: 3px;
+    height: 70px;
+    bottom: 30px;
+    right: 2px;
+    transform-origin: bottom;
+    transform: rotate(140deg);
+}
+
+.seconds {
+    width: 1.5px;
+    height: 80px;
+    background-color: #8a817c;
+    transform-origin: bottom;
+    transform: rotate(120deg);
+    bottom: 35px;
+    right: 2px;
+}
+
+.center {
+    width: 10px;
+    height: 10px;
+    background-color: #8a817c;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    right: 10px;
+}
+
+#dateContainer {
+    position: relative;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    margin: 40px auto;
+}
+
+.date-dark {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--dark-btn-shadow);
+    color: #caf0f8;
+    background-color: transparent;
+}
+
+.date-light {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-shadow: var(--light-btn-shadow);
+    color: #1b4332;
+    background-color: transparent;
+}
